@@ -1,0 +1,47 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<XtraReportsLayoutSerializer SerializerVersion="21.1.5.0" Ref="1" ControlType="DevExpress.XtraReports.UI.XtraReport, DevExpress.XtraReports.v21.1, Version=21.1.5.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" Name="Report1" DisplayName="Emplyee text filler" PageWidth="850" PageHeight="1100" Version="21.1" DataSource="#Ref-0" Font="Arial, 9.75pt">
+  <Extensions>
+    <Item1 Ref="2" Key="DataSerializationExtension" Value="XtraReport" />
+    <Item2 Ref="3" Key="DataEditorExtension" Value="XtraReport" />
+    <Item3 Ref="4" Key="ParameterEditorExtension" Value="XtraReport" />
+  </Extensions>
+  <Bands>
+    <Item1 Ref="5" ControlType="TopMarginBand" Name="TopMargin" />
+    <Item2 Ref="6" ControlType="BottomMarginBand" Name="BottomMargin" />
+    <Item3 Ref="7" ControlType="DetailBand" Name="Detail" PageBreak="BeforeBandExceptFirstEntry" HeightF="420.1389">
+      <Controls>
+        <Item1 Ref="8" ControlType="XRBarCode" Name="barCode1" AutoModule="true" SizeF="170.833328,115.972229" LocationFloat="11.8055553,295.1389" Padding="10,10,0,0,96">
+          <Symbology Ref="9" Name="QRCode" Version="Version1" />
+          <ExpressionBindings>
+            <Item1 Ref="10" EventName="BeforePrint" PropertyName="Text" Expression="'www.devexpress.com'" />
+          </ExpressionBindings>
+        </Item1>
+        <Item2 Ref="11" ControlType="XRLabel" Name="label3" Multiline="true" Text="label3" SizeF="289.583344,23" LocationFloat="27.7777786,46.6111069" Padding="2,2,0,0,96">
+          <ExpressionBindings>
+            <Item1 Ref="12" EventName="BeforePrint" PropertyName="Text" Expression="[LastName]" />
+          </ExpressionBindings>
+        </Item2>
+        <Item3 Ref="13" ControlType="XRLabel" Name="label2" Multiline="true" Text="label2" SizeF="289.583344,23" LocationFloat="27.7777786,0" Padding="2,2,0,0,96">
+          <ExpressionBindings>
+            <Item1 Ref="14" EventName="BeforePrint" PropertyName="Text" Expression="[FullName]" />
+          </ExpressionBindings>
+        </Item3>
+        <Item4 Ref="15" ControlType="XRLabel" Name="label1" Multiline="true" Text="label1" SizeF="289.583344,23.0000038" LocationFloat="27.7777786,23.61111" Padding="2,2,0,0,96">
+          <ExpressionBindings>
+            <Item1 Ref="16" EventName="BeforePrint" PropertyName="Text" Expression="[FirstName]" />
+          </ExpressionBindings>
+        </Item4>
+        <Item5 Ref="17" ControlType="XRPictureBox" Name="pictureBox1" Sizing="ZoomImage" SizeF="227.7778,365.277771" LocationFloat="358.333282,23.61111">
+          <ExpressionBindings>
+            <Item1 Ref="18" EventName="BeforePrint" PropertyName="ImageSource" Expression="[Photo]" />
+          </ExpressionBindings>
+        </Item5>
+      </Controls>
+    </Item3>
+  </Bands>
+  <ComponentStorage>
+    <Item1 Ref="0" Name="collectionDataSource1" ObjectTypeName="MainDemo.Module.BusinessObjects.Employee" ObjectType="DevExpress.Persistent.Base.ReportsV2.CollectionDataSource,DevExpress.Persistent.Base.v21.1" TopReturnedRecords="0">
+      <Sorting Ref="19" />
+    </Item1>
+  </ComponentStorage>
+</XtraReportsLayoutSerializer>

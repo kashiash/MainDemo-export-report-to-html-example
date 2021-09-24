@@ -232,6 +232,9 @@
     <Compile Include="Controllers\ClearEmployeeTasksController.Designer.cs">
       <DependentUpon>ClearEmployeeTasksController.cs</DependentUpon>
     </Compile>
+    <Compile Include="Controllers\SuperDuperController.cs">
+      <SubType>Component</SubType>
+    </Compile>
     <Compile Include="DemoDbEngineDetectorHelper.cs" />
     <Compile Include="DemoXPODatabaseHelper.cs" />
     <Compile Include="MainDemoModule.cs">
