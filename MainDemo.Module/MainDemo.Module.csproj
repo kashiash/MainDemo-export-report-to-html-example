@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8"?>
+﻿<?xml version="1.0" encoding="utf-8"?>
 <Project DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003" ToolsVersion="14.0">
   <PropertyGroup>
     <OwnerKey>{FE3BBBB6-72D5-11d2-9ACE-00C04F79A2A4}</OwnerKey>
@@ -115,7 +115,8 @@
       <Private>False</Private>
     </Reference>
     <Reference Include="DevExpress.ExpressApp.CloneObject.v21.1">
-    <Private>False</Private></Reference>
+      <Private>False</Private>
+    </Reference>
     <Reference Include="DevExpress.ExpressApp.ConditionalAppearance.v21.1">
       <Private>False</Private>
     </Reference>
@@ -184,24 +185,34 @@
     </Reference>
     <Reference Include="System">
       <Name>System</Name>
-    <Private>False</Private></Reference>
-    <Reference Include="System.configuration"><Private>False</Private></Reference>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="System.configuration">
+      <Private>False</Private>
+    </Reference>
     <Reference Include="System.Core">
       <RequiredTargetFramework>3.5</RequiredTargetFramework>
-    <Private>False</Private></Reference>
+      <Private>False</Private>
+    </Reference>
     <Reference Include="System.Data">
       <Name>System.Data</Name>
-    <Private>False</Private></Reference>
+      <Private>False</Private>
+    </Reference>
     <Reference Include="System.Drawing">
       <Name>System.Drawing</Name>
-    <Private>False</Private></Reference>
-    <Reference Include="System.Web"><Private>False</Private></Reference>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="System.Web">
+      <Private>False</Private>
+    </Reference>
     <Reference Include="System.Windows.Forms">
       <Name>System.Windows.Forms</Name>
-    <Private>False</Private></Reference>
+      <Private>False</Private>
+    </Reference>
     <Reference Include="System.Xml">
       <Name>System.XML</Name>
-    <Private>False</Private></Reference>
+      <Private>False</Private>
+    </Reference>
   </ItemGroup>
   <ItemGroup>
     <Compile Include="BusinessObjects\ApplicationUser.cs" />
@@ -290,7 +301,6 @@
     </EmbeddedResource>
   </ItemGroup>
   <ItemGroup>
-    <Content Include="BusinessObjects\ReadMe.txt" />
     <Content Include="Controllers\ReadMe.txt" />
     <EmbeddedResource Include="DatabaseUpdate\Tasks.xml" />
     <EmbeddedResource Include="DatabaseUpdate\EmployeesWithPhoto.xml" />
@@ -328,7 +338,5 @@
   </ItemGroup>
   <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
   <PropertyGroup>
-    
-    
   </PropertyGroup>
 </Project>
