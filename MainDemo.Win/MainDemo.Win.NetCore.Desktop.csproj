@@ -1,0 +1,212 @@
+<?xml version="1.0" encoding="utf-8"?><Project Sdk="Microsoft.NET.Sdk">
+  <PropertyGroup>
+    <ProjectType>Local</ProjectType>
+    <ProductVersion>9.0.30729</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{6ABA08C0-4C39-490C-9F2E-8C97EC101FB0}</ProjectGuid>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ApplicationIcon>ExpressApp.ico</ApplicationIcon>
+    <AssemblyName>MainDemo.Win</AssemblyName>
+    <RootNamespace>MainDemo.Win</RootNamespace>
+    <OutputType>WinExe</OutputType>
+    <RunPostBuildEvent>OnBuildSuccess</RunPostBuildEvent>
+    <TargetFramework>net5.0-windows</TargetFramework>
+    <UseWindowsForms>true</UseWindowsForms>
+    <EmbeddedResourceUseDependentUponConvention>false</EmbeddedResourceUseDependentUponConvention>
+    <GenerateAssemblyInfo>false</GenerateAssemblyInfo>
+    <DefineConstants>DXCORE3</DefineConstants>
+    <EnableDefaultItems>false</EnableDefaultItems>
+    <AppendTargetFrameworkToOutputPath>false</AppendTargetFrameworkToOutputPath>
+    <AppConfig>App.NetCore.Desktop.config</AppConfig>
+    <PublishUrl>publish\</PublishUrl>
+    <Install>true</Install>
+    <InstallFrom>Disk</InstallFrom>
+    <UpdateEnabled>false</UpdateEnabled>
+    <UpdateMode>Foreground</UpdateMode>
+    <UpdateInterval>7</UpdateInterval>
+    <UpdateIntervalUnits>Days</UpdateIntervalUnits>
+    <UpdatePeriodically>false</UpdatePeriodically>
+    <UpdateRequired>false</UpdateRequired>
+    <MapFileExtensions>true</MapFileExtensions>
+    <ApplicationRevision>0</ApplicationRevision>
+    <ApplicationVersion>1.0.0.%2a</ApplicationVersion>
+    <IsWebBootstrapper>false</IsWebBootstrapper>
+    <UseApplicationTrust>false</UseApplicationTrust>
+    <BootstrapperEnabled>true</BootstrapperEnabled>
+    <Configurations>Debug;Release;EasyTest</Configurations>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <OutputPath>bin\Debug\</OutputPath>
+    <AllowUnsafeBlocks>false</AllowUnsafeBlocks>
+    <BaseAddress>285212672</BaseAddress>
+    <CheckForOverflowUnderflow>false</CheckForOverflowUnderflow>
+    <DefineConstants>DEBUG;TRACE;DXCORE3</DefineConstants>
+    <LangVersion>6</LangVersion>
+    <DebugSymbols>true</DebugSymbols>
+    <FileAlignment>4096</FileAlignment>
+    <NoStdLib>false</NoStdLib>
+    <Optimize>false</Optimize>
+    <RegisterForComInterop>false</RegisterForComInterop>
+    <RemoveIntegerChecks>false</RemoveIntegerChecks>
+    <TreatWarningsAsErrors>false</TreatWarningsAsErrors>
+    <WarningLevel>4</WarningLevel>
+    <DebugType>full</DebugType>
+    <ErrorReport>prompt</ErrorReport>
+    <UseVSHostingProcess>true</UseVSHostingProcess>
+    <PlatformTarget>AnyCPU</PlatformTarget>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <OutputPath>bin\Release\</OutputPath>
+    <AllowUnsafeBlocks>false</AllowUnsafeBlocks>
+    <BaseAddress>285212672</BaseAddress>
+    <CheckForOverflowUnderflow>false</CheckForOverflowUnderflow>
+    <DefineConstants>TRACE;DXCORE3</DefineConstants>
+    <LangVersion>6</LangVersion>
+    <DebugSymbols>false</DebugSymbols>
+    <FileAlignment>4096</FileAlignment>
+    <NoStdLib>false</NoStdLib>
+    <Optimize>true</Optimize>
+    <RegisterForComInterop>false</RegisterForComInterop>
+    <RemoveIntegerChecks>false</RemoveIntegerChecks>
+    <TreatWarningsAsErrors>false</TreatWarningsAsErrors>
+    <WarningLevel>4</WarningLevel>
+    <DebugType>none</DebugType>
+    <ErrorReport>prompt</ErrorReport>
+    <PlatformTarget>AnyCPU</PlatformTarget>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'EasyTest|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>TRACE;DEBUG;EASYTEST;DXCORE3</DefineConstants>
+    <LangVersion>6</LangVersion>
+    <BaseAddress>285212672</BaseAddress>
+    <FileAlignment>4096</FileAlignment>
+    <DebugType>full</DebugType>
+    <ErrorReport>prompt</ErrorReport>
+    <PlatformTarget>AnyCPU</PlatformTarget>
+  </PropertyGroup>
+  <ItemGroup>
+    <PackageReference Include="DevExpress.ExpressApp.Notifications.Win" Version="21.1.5" />
+    <PackageReference Include="DevExpress.ExpressApp.Office.Win" Version="21.1.5" />
+    <PackageReference Include="DevExpress.ExpressApp.Security.Xpo" Version="21.1.5" />
+    <PackageReference Include="DevExpress.ExpressApp.PivotChart.Win" Version="21.1.5" />
+    <PackageReference Include="DevExpress.ExpressApp.ScriptRecorder.Win" Version="21.1.5" />
+    <PackageReference Include="DevExpress.ExpressApp.FileAttachment.Win" Version="21.1.5" />
+    <PackageReference Include="DevExpress.ExpressApp.Validation.Win" Version="21.1.5" />
+    <PackageReference Include="DevExpress.ExpressApp.Blazor.All" Version="21.1.5" />
+    <PackageReference Include="DevExpress.ExpressApp.ReportsV2.Win" Version="21.1.5" />
+    <PackageReference Include="DevExpress.ExpressApp.Scheduler.Win" Version="21.1.5" />
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="XafDemoSplashScreen.Designer.cs">
+      <DependentUpon>XafDemoSplashScreen.cs</DependentUpon>
+    </Compile>
+    <Content Include="App.NetCore.Desktop.config" />
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Content Include="ExpressApp.ico" />
+    <EmbeddedResource Include="Images\SplashScreenImage.svg" />
+    <Content Include="Model.xafml">
+      <Subtype>Designer</Subtype>
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Compile Include="XafDemoSplashScreen.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Properties\DemoApplicationVersionInfo.cs" />
+    <Compile Include="MainDemoWinApplication.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="MainDemoWinApplication.Designer.cs">
+      <DependentUpon>MainDemoWinApplication.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\MainDemo.Module.Win\MainDemo.Module.Win.NetCore.Desktop.csproj">
+      <Project>{70AC2425-F2E8-480A-825C-9E42C8F071E6}</Project>
+      <Name>MainDemo.Module.Win</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\MainDemo.Module\MainDemo.Module.NetCore.Desktop.csproj">
+      <Project>{D7B72244-7C11-414B-ABE5-A3EB78567D93}</Project>
+      <Name>MainDemo.Module</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="MainDemoWinApplication.resx">
+      <DependentUpon>MainDemoWinApplication.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="XafDemoSplashScreen.resx">
+      <DependentUpon>XafDemoSplashScreen.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <PackageReference Include="Microsoft.CodeAnalysis.CSharp" Version="3.3.1" />
+    <PackageReference Include="Microsoft.CodeAnalysis.Common" Version="3.3.1" />
+    <PackageReference Include="System.Data.SqlClient" Version="4.8.0" />
+    <PackageReference Include="System.Diagnostics.PerformanceCounter" Version="4.6.0" />
+  </ItemGroup>
+</Project>

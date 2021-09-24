@@ -1,0 +1,219 @@
+<?xml version="1.0" encoding="utf-8"?><Project Sdk="Microsoft.NET.Sdk">
+  <PropertyGroup>
+    <OwnerKey>{FE3BBBB6-72D5-11d2-9ACE-00C04F79A2A4}</OwnerKey>
+    <ProjectType>Local</ProjectType>
+    <ProductVersion>9.0.30729</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{D7B72244-7C11-414B-ABE5-A3EB78567D93}</ProjectGuid>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <AssemblyName>MainDemo.Module</AssemblyName>
+    <DefaultClientScript>JScript</DefaultClientScript>
+    <DefaultHTMLPageLayout>Grid</DefaultHTMLPageLayout>
+    <DefaultTargetSchema>IE50</DefaultTargetSchema>
+    <DelaySign>false</DelaySign>
+    <OutputType>Library</OutputType>
+    <RootNamespace>MainDemo.Module</RootNamespace>
+    <RunPostBuildEvent>OnBuildSuccess</RunPostBuildEvent>
+    <TargetFramework>net5.0-windows</TargetFramework>
+    <UseWindowsForms>true</UseWindowsForms>
+    <EmbeddedResourceUseDependentUponConvention>false</EmbeddedResourceUseDependentUponConvention>
+    <GenerateAssemblyInfo>false</GenerateAssemblyInfo>
+    <DefineConstants>DXCORE3</DefineConstants>
+    <EnableDefaultItems>false</EnableDefaultItems>
+    <AppendTargetFrameworkToOutputPath>false</AppendTargetFrameworkToOutputPath>
+    <PublishUrl>publish\</PublishUrl>
+    <Install>true</Install>
+    <InstallFrom>Disk</InstallFrom>
+    <UpdateEnabled>false</UpdateEnabled>
+    <UpdateMode>Foreground</UpdateMode>
+    <UpdateInterval>7</UpdateInterval>
+    <UpdateIntervalUnits>Days</UpdateIntervalUnits>
+    <UpdatePeriodically>false</UpdatePeriodically>
+    <UpdateRequired>false</UpdateRequired>
+    <MapFileExtensions>true</MapFileExtensions>
+    <ApplicationRevision>0</ApplicationRevision>
+    <ApplicationVersion>1.0.0.%2a</ApplicationVersion>
+    <IsWebBootstrapper>false</IsWebBootstrapper>
+    <UseApplicationTrust>false</UseApplicationTrust>
+    <BootstrapperEnabled>true</BootstrapperEnabled>
+    <LangVersion>6</LangVersion>
+    <Configurations>Debug;Release;EasyTest</Configurations>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <OutputPath>bin\Debug\</OutputPath>
+    <AllowUnsafeBlocks>false</AllowUnsafeBlocks>
+    <BaseAddress>285212672</BaseAddress>
+    <CheckForOverflowUnderflow>false</CheckForOverflowUnderflow>
+    <DefineConstants>DEBUG;TRACE;DXCORE3</DefineConstants>
+    <DebugSymbols>true</DebugSymbols>
+    <FileAlignment>4096</FileAlignment>
+    <NoStdLib>false</NoStdLib>
+    <Optimize>false</Optimize>
+    <RegisterForComInterop>false</RegisterForComInterop>
+    <RemoveIntegerChecks>false</RemoveIntegerChecks>
+    <TreatWarningsAsErrors>false</TreatWarningsAsErrors>
+    <WarningLevel>4</WarningLevel>
+    <DebugType>full</DebugType>
+    <ErrorReport>prompt</ErrorReport>
+    <Prefer32Bit>false</Prefer32Bit>
+    <LangVersion>6</LangVersion>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <OutputPath>bin\Release\</OutputPath>
+    <AllowUnsafeBlocks>false</AllowUnsafeBlocks>
+    <BaseAddress>285212672</BaseAddress>
+    <CheckForOverflowUnderflow>false</CheckForOverflowUnderflow>
+    <ConfigurationOverrideFile>
+    </ConfigurationOverrideFile>
+    <DefineConstants>TRACE;DXCORE3</DefineConstants>
+    <DebugSymbols>false</DebugSymbols>
+    <FileAlignment>4096</FileAlignment>
+    <NoStdLib>false</NoStdLib>
+    <Optimize>true</Optimize>
+    <RegisterForComInterop>false</RegisterForComInterop>
+    <RemoveIntegerChecks>false</RemoveIntegerChecks>
+    <TreatWarningsAsErrors>false</TreatWarningsAsErrors>
+    <WarningLevel>4</WarningLevel>
+    <DebugType>none</DebugType>
+    <ErrorReport>prompt</ErrorReport>
+    <Prefer32Bit>false</Prefer32Bit>
+    <LangVersion>6</LangVersion>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'EasyTest|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>TRACE;DEBUG;EASYTEST;DXCORE3</DefineConstants>
+    <BaseAddress>285212672</BaseAddress>
+    <FileAlignment>4096</FileAlignment>
+    <DebugType>full</DebugType>
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <ErrorReport>prompt</ErrorReport>
+    <Prefer32Bit>false</Prefer32Bit>
+    <LangVersion>6</LangVersion>
+  </PropertyGroup>
+  <ItemGroup>
+    <PackageReference Include="DevExpress.Win.Reporting" Version="21.1.5" />
+    <PackageReference Include="DevExpress.ExpressApp.Core.All" Version="21.1.5" />
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="BusinessObjects\ApplicationUser.cs" />
+    <Compile Include="BusinessObjects\ApplicationUserLoginInfo.cs" />
+    <Compile Include="BusinessObjects\Department.cs" />
+    <Compile Include="BusinessObjects\Employee.cs" />
+    <Compile Include="BusinessObjects\Location.cs" />
+    <Compile Include="BusinessObjects\Paycheck.cs" />
+    <Compile Include="BusinessObjects\PortfolioFileData.cs" />
+    <Compile Include="BusinessObjects\Position.cs" />
+    <Compile Include="CodeRules\RuleCriteriaValidationBase.cs" />
+    <Compile Include="CodeRules\RuleMemberPermissionsCriteria.cs" />
+    <Compile Include="CodeRules\RuleObjectPermissionsCriteria.cs" />
+    <Compile Include="Controllers\ClearEmployeeTasksController.cs" />
+    <Compile Include="Controllers\ClearEmployeeTasksController.Designer.cs" />
+    <Compile Include="DemoDbEngineDetectorHelper.cs" />
+    <Compile Include="DemoXPODatabaseHelper.cs" />
+    <Compile Include="MainDemoModule.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="MainDemoModule.Designer.cs">
+      <DependentUpon>MainDemoModule.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Controllers\PopupNotesController.cs" />
+    <Compile Include="Controllers\PopupNotesController.Designer.cs">
+      <DependentUpon>PopupNotesController.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="BusinessObjects\Resume.cs" />
+    <Compile Include="Controllers\TaskActionsController.cs" />
+    <Compile Include="Controllers\TaskActionsController.Designer.cs">
+      <DependentUpon>TaskActionsController.cs</DependentUpon>
+    </Compile>
+    <Compile Include="BusinessObjects\Task.cs" />
+    <Compile Include="DatabaseUpdate\Updater.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Reports\EmployeeListReport.cs" />
+    <Compile Include="Reports\EmployeeListReport.Designer.cs" />
+    <Compile Include="UseSQLAlternativeInfo.cs" />
+    <EmbeddedResource Include="Controllers\ClearEmployeeTasksController.resx" />
+    <EmbeddedResource Include="Model.DesignedDiffs.xafml">
+      <Subtype>Designer</Subtype>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Controllers\PopupNotesController.resx">
+      <DependentUpon>PopupNotesController.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Model.DesignedDiffs.Localization.de.xafml">
+      <DependentUpon>Model.DesignedDiffs.xafml</DependentUpon>
+      <Subtype>Designer</Subtype>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Controllers\TaskActionsController.resx">
+      <DependentUpon>TaskActionsController.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="MainDemoModule.resx">
+      <DependentUpon>MainDemoModule.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="BusinessObjects\ReadMe.txt" />
+    <Content Include="Controllers\ReadMe.txt" />
+    <EmbeddedResource Include="DatabaseUpdate\Departments.xml" />
+    <EmbeddedResource Include="DatabaseUpdate\Tasks.xml" />
+    <EmbeddedResource Include="DatabaseUpdate\EmployeesWithPhoto.xml" />
+    <Content Include="DatabaseUpdate\ReadMe.txt" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="DatabaseUpdate\Resume\Aaron_Borrmann.pdf" />
+    <EmbeddedResource Include="DatabaseUpdate\Resume\Alberta_Berntsen.pdf" />
+    <EmbeddedResource Include="DatabaseUpdate\Resume\Almas_Basinger.pdf" />
+    <EmbeddedResource Include="DatabaseUpdate\Resume\Anita_Benson.pdf" />
+    <EmbeddedResource Include="DatabaseUpdate\Resume\Anita_Boyd.pdf" />
+    <EmbeddedResource Include="DatabaseUpdate\Resume\Carolyn_Baker.pdf" />
+    <EmbeddedResource Include="DatabaseUpdate\Resume\Chandler_Bevington.pdf" />
+    <EmbeddedResource Include="DatabaseUpdate\Resume\Donald_Bradley.pdf" />
+    <EmbeddedResource Include="DatabaseUpdate\Resume\Francine_Bing.pdf" />
+    <EmbeddedResource Include="DatabaseUpdate\Resume\Hewitt_Aiello.pdf" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Model.DesignedDiffs.Localization.ru.xafml">
+      <DependentUpon>Model.DesignedDiffs.xafml</DependentUpon>
+      <Subtype>Designer</Subtype>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Reports\EmployeeListReport.resx" />
+  </ItemGroup>
+  <ItemGroup>
+    <PackageReference Include="Microsoft.CodeAnalysis.CSharp" Version="3.3.1" />
+    <PackageReference Include="System.Data.SqlClient" Version="4.8.0" />
+    <PackageReference Include="System.Diagnostics.PerformanceCounter" Version="4.6.0" />
+  </ItemGroup>
+</Project>
