@@ -10,6 +10,7 @@ using DevExpress.Xpo;
 namespace MainDemo.Module.BusinessObjects {
     [DefaultClassOptions]
     public class Employee : Person, IMapsMarker {
+        string text;
         private string webPageAddress;
         private Employee manager;
         private string nickName;
@@ -18,104 +19,139 @@ namespace MainDemo.Module.BusinessObjects {
         private string notes;
         private DateTime? anniversary;
         public Employee(Session session) :
-            base(session) {
+            base(session)
+        {
         }
         [RuleRegularExpression(@"(((http|https)\://)|(www.)[a-zA-Z0-9\-\.]+\.[a-zA-Z]{2,3}(:[a-zA-Z0-9]*)?/?([a-zA-Z0-9\-\._\?\,\'/\\\+&amp;amp;%\$#\=~])*)|([a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,6})", CustomMessageTemplate = @"Invalid ""Web Page Address"".")]
-        public string WebPageAddress {
-            get {
+        public string WebPageAddress
+        {
+            get
+            {
                 return webPageAddress;
             }
-            set {
+            set
+            {
                 SetPropertyValue(nameof(WebPageAddress), ref webPageAddress, value);
             }
         }
         [DataSourceProperty("Department.Employees", DataSourcePropertyIsNullMode.SelectAll)]
         [DataSourceCriteria("Position.Title = 'Manager' AND Oid != '@This.Oid'")]
-        public Employee Manager {
-            get {
+        public Employee Manager
+        {
+            get
+            {
                 return manager;
             }
-            set {
+            set
+            {
                 SetPropertyValue(nameof(Manager), ref manager, value);
             }
         }
-        public string NickName {
-            get {
+        public string NickName
+        {
+            get
+            {
                 return nickName;
             }
-            set {
+            set
+            {
                 SetPropertyValue(nameof(NickName), ref nickName, value);
             }
         }
-        public string SpouseName {
-            get {
+        public string SpouseName
+        {
+            get
+            {
                 return spouseName;
             }
-            set {
+            set
+            {
                 SetPropertyValue(nameof(SpouseName), ref spouseName, value);
             }
         }
-        public TitleOfCourtesy TitleOfCourtesy {
-            get {
+        public TitleOfCourtesy TitleOfCourtesy
+        {
+            get
+            {
                 return titleOfCourtesy;
             }
-            set {
+            set
+            {
                 SetPropertyValue(nameof(TitleOfCourtesy), ref titleOfCourtesy, value);
             }
         }
-        public DateTime? Anniversary {
-            get {
+        public DateTime? Anniversary
+        {
+            get
+            {
                 return anniversary;
             }
-            set {
+            set
+            {
                 SetPropertyValue(nameof(Anniversary), ref anniversary, value);
             }
         }
         [Size(4096)]
-        public string Notes {
-            get {
+        public string Notes
+        {
+            get
+            {
                 return notes;
             }
-            set {
+            set
+            {
                 SetPropertyValue(nameof(Notes), ref notes, value);
             }
         }
         private Department department;
         [Association("Department-Employees"), ImmediatePostData]
-        public Department Department {
-            get {
+        public Department Department
+        {
+            get
+            {
                 return department;
             }
-            set {
+            set
+            {
                 SetPropertyValue(nameof(Department), ref department, value);
-                if(!IsLoading) {
+                if (!IsLoading)
+                {
                     Position = null;
-                    if(Manager != null && Manager.Department != value) {
+                    if (Manager != null && Manager.Department != value)
+                    {
                         Manager = null;
                     }
                 }
             }
         }
         private Position position;
-        public Position Position {
-            get {
+        public Position Position
+        {
+            get
+            {
                 return position;
             }
-            set {
+            set
+            {
                 SetPropertyValue(nameof(Position), ref position, value);
             }
         }
         [Association("Employee-DemoTask")]
-        public XPCollection<DemoTask> Tasks {
-            get {
+        public XPCollection<DemoTask> Tasks
+        {
+            get
+            {
                 return GetCollection<DemoTask>(nameof(Tasks));
             }
         }
         private XPCollection<AuditDataItemPersistent> changeHistory;
         [CollectionOperationSet(AllowAdd = false, AllowRemove = false)]
-        public XPCollection<AuditDataItemPersistent> ChangeHistory {
-            get {
-                if(changeHistory == null) {
+        public XPCollection<AuditDataItemPersistent> ChangeHistory
+        {
+            get
+            {
+                if (changeHistory == null)
+                {
                     changeHistory = AuditedObjectWeakReference.GetAuditTrail(Session, this);
                 }
                 return changeHistory;
@@ -124,37 +160,60 @@ namespace MainDemo.Module.BusinessObjects {
 
         private Location location;
         [Aggregated, ExpandObjectMembers(ExpandObjectMembers.Never), VisibleInListView(false)]
-        public Location Location {
-            get {
+        public Location Location
+        {
+            get
+            {
                 return location;
             }
-            set {
+            set
+            {
                 SetPropertyValue(nameof(Location), ref location, value);
             }
         }
         [VisibleInListView(false), VisibleInDetailView(false)]
         [PersistentAlias("FullName")]
         [System.ComponentModel.Browsable(false)]
-        public string Title {
+        public string Title
+        {
             get { return Convert.ToString(EvaluateAlias(nameof(Title))); }
         }
         [VisibleInListView(false), VisibleInDetailView(false)]
         [PersistentAlias("Location.Latitude")]
-        public double Latitude {
+        public double Latitude
+        {
             get { return Convert.ToDouble(EvaluateAlias(nameof(Latitude))); }
         }
         [VisibleInListView(false), VisibleInDetailView(false)]
         [PersistentAlias("Location.Longitude")]
-        public double Longitude {
+        public double Longitude
+        {
             get { return Convert.ToDouble(EvaluateAlias(nameof(Longitude))); }
         }
 
-        public override void AfterConstruction() {
+        public override void AfterConstruction()
+        {
             base.AfterConstruction();
 
             location = new Location(Session);
             location.Employee = this;
         }
+
+        [Size(SizeAttribute.Unlimited)]
+        [EditorAlias(EditorAliases.RichTextPropertyEditor)]
+
+        public string Text
+        {
+            get
+            {
+                return text;
+            }
+            set
+            {
+                SetPropertyValue(nameof(Text), ref text, value);
+            }
+        }
+
     }
     public enum TitleOfCourtesy {
         Dr,
